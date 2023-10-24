@@ -1,11 +1,11 @@
 <script lang="ts">
 
 	
-	import { Label } from '$sadcn/ui/label';
-	import Button from '$sadcn/ui/button/button.svelte';
-	import CustomIcon from '$sadcn/ui/icons/CustomIcon.svelte';
-	import Input from '$sadcn/ui/input/input.svelte';
-	import { cn } from '$sadcn/utils';
+	import { Label } from '$shadcn/ui/label';
+	import Button from '$shadcn/ui/button/button.svelte';
+	import CustomIcon from '$shadcn/ui/icons/CustomIcon.svelte';
+	import Input from '$shadcn/ui/input/input.svelte';
+	import { cn } from '$shadcn/utils';
 	
 
 	let className: string | undefined | null = undefined;

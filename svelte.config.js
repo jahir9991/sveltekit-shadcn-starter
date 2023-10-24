@@ -16,8 +16,8 @@ const config = {
 			$src: './src',
 			$lib: './src/lib',
 			$pages: './src/pages',
-			$sadcn: './src/sadcn',
-			'$sadcn/*': './src/sadcn/*'
+			$shadcn: './src/shadcn',
+			'$shadcn/*': './src/shadcn/*'
 		}
 	}
 };

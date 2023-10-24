@@ -1,41 +1,28 @@
 <script lang="ts">
 	import { PlusCircled } from "radix-icons-svelte";
 	
-	import * as Tabs from "$src/sadcn/ui/tabs";
+	import * as Tabs from "$src/shadcn/ui/tabs";
 	
 	import { playlists } from "$src/pages/dash/(data)/playlists";
 	import { listenNowAlbums, madeForYouAlbums } from "$src/pages/dash/(data)/albums";
 	import Menu from "$src/pages/dash/menu.svelte";
 	import Sidebar from "$src/pages/dash/sidebar.svelte";
-	import Button from "$src/sadcn/ui/button/button.svelte";
-	import Separator from "$src/sadcn/ui/separator/separator.svelte";
+	import Button from "$src/shadcn/ui/button/button.svelte";
+	import Separator from "$src/shadcn/ui/separator/separator.svelte";
 	import AlbumArtwork from "$src/pages/dash/album-artwork.svelte";
 	import PodcastEmptyPlaceholder from "$src/pages/dash/podcast-empty-placeholder.svelte";
+	import Richtableview from "$src/pages/dash/richtableview.svelte";
+	import Basictableview from "$src/pages/dash/basictableview.svelte";
 </script>
 
-<div class="md:hidden">
-	<img
-		src="/examples/music-light.png"
-		width={1280}
-		height={1114}
-		alt="Music"
-		class="block dark:hidden"
-	/>
-	<img
-		src="/examples/music-dark.png"
-		width={1280}
-		height={1114}
-		alt="Music"
-		class="hidden dark:block"
-	/>
-</div>
-<div class="hidden md:block">
-	<Menu />
+
+<div class="md:block">
+	<!-- <Menu /> -->
 	<div class="border-t">
 		<div class="bg-background">
 			<div class="grid lg:grid-cols-5">
-				<Sidebar {playlists} class="hidden lg:block" />
-				<div class="col-span-3 lg:col-span-4 lg:border-l">
+				<!-- <Sidebar {playlists} class="hidden lg:block" /> -->
+				<div class="col-span-3 lg:col-span-5 lg:border-l">
 					<div class="h-full px-4 py-6 lg:px-8">
 						<Tabs.Root value="music" class="h-full space-y-6">
 							<div class="space-between flex items-center">
@@ -49,8 +36,11 @@
 									<Tabs.Trigger value="podcasts"
 										>Podcasts</Tabs.Trigger
 									>
-									<Tabs.Trigger value="live" disabled
-										>Live</Tabs.Trigger
+									<Tabs.Trigger value="basictable" 
+										>Basic Table</Tabs.Trigger
+									>
+									<Tabs.Trigger value="richtable" 
+										>Rich Table</Tabs.Trigger
 									>
 								</Tabs.List>
 								<div class="ml-auto mr-4">
@@ -142,6 +132,52 @@
 								</div>
 								<Separator class="my-4" />
 								<PodcastEmptyPlaceholder />
+							</Tabs.Content>
+							<Tabs.Content
+								value="basictable"
+								class="h-full flex-col border-none p-0 data-[state=active]:flex"
+							>
+								<div class="flex items-center justify-between">
+									<div class="space-y-1">
+										<h2
+											class="text-2xl font-semibold tracking-tight"
+										>
+											Basic table
+										</h2>
+										<p
+											class="text-sm text-muted-foreground"
+										>
+											Your favorite podcasts. Updated
+											daily.
+										</p>
+									</div>
+								</div>
+								<Separator class="my-4" />
+								<Basictableview></Basictableview>
+								
+							</Tabs.Content>
+							<Tabs.Content
+								value="richtable"
+								class="h-full flex-col border-none p-0 data-[state=active]:flex"
+							>
+								<div class="flex items-center justify-between">
+									<div class="space-y-1">
+										<h2
+											class="text-2xl font-semibold tracking-tight"
+										>
+											Rich table
+										</h2>
+										<p
+											class="text-sm text-muted-foreground"
+										>
+											Your favorite podcasts. Updated
+											daily.
+										</p>
+									</div>
+								</div>
+								<Separator class="my-4" />
+								<Richtableview></Richtableview>
+								
 							</Tabs.Content>
 						</Tabs.Root>
 					</div>

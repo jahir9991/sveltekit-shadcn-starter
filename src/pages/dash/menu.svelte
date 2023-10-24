@@ -1,5 +1,5 @@
 <script lang="ts">
-	import * as Menubar from "$sadcn/ui/menubar";
+	import * as Menubar from "$shadcn/ui/menubar";
 
 	// import * as Menubar from "/ui/menubar";
 </script>

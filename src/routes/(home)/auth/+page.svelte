@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$sadcn/ui/button/button.svelte';
+	import Button from '$shadcn/ui/button/button.svelte';
 	import AuthForm from '$src/pages/auth/components/authForm.svelte';
 </script>
 

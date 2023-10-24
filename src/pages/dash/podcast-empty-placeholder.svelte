@@ -1,8 +1,15 @@
 <script lang="ts">
-	import Button from "$sadcn/ui/button/button.svelte";
-	import Input from "$sadcn/ui/input/input.svelte";
-	import Label from "$sadcn/ui/label/label.svelte";
-	import * as Dialog from "$sadcn/ui/dialog";
+	import Button from "$shadcn/ui/button/button.svelte";
+	import Input from "$shadcn/ui/input/input.svelte";
+	import Label from "$shadcn/ui/label/label.svelte";
+	import * as Dialog from "$shadcn/ui/dialog";
+
+	let isopen=false;
+
+	const onOpenChange=(p)=>{
+		console.log(p);
+		isopen=false;
+	}
 	
 </script>
 
@@ -33,12 +40,15 @@
 		<p class="mb-4 mt-2 text-sm text-muted-foreground">
 			You have not added any podcasts. Add one below.
 		</p>
-		<Dialog.Root>
-			<Dialog.Trigger asChild let:builder>
+
+		<Button on:click={()=>{isopen=true;}}></Button>
+
+		<Dialog.Root open={isopen} onOpenChange={onOpenChange} >
+			<!-- <Dialog.Trigger asChild let:builder>
 				<Button size="sm" builders={[builder]} class="relative">
 					Add Podcast
 				</Button>
-			</Dialog.Trigger>
+			</Dialog.Trigger> -->
 			<Dialog.Content>
 				<Dialog.Header>
 					<Dialog.Title>Add Podcast</Dialog.Title>

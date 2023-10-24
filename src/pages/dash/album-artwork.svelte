@@ -3,8 +3,8 @@
 
 	import type { Album } from "./(data)/albums";
 	import { playlists } from "./(data)/playlists";
-	import { cn } from "$sadcn/utils";
-	import * as  ContextMenu  from "$sadcn/ui/context-menu";
+	import { cn } from "$shadcn/utils";
+	import * as  ContextMenu  from "$shadcn/ui/context-menu";
 
 	let className: string | undefined | null = undefined;
 	export let album: Album;

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "$sadcn/ui/button/button.svelte";
-	import { cn } from "$sadcn/utils";
+	import Button from "$shadcn/ui/button/button.svelte";
+	import { cn } from "$shadcn/utils";
 	import type { Playlist } from "./(data)/playlists";
 
 
@@ -9,7 +9,7 @@
 	export { className as class };
 </script>
 
-<div class={cn("pb-12", className)}>
+<aside class={cn("pb-12", className)}>
 	<div class="space-y-4 py-4">
 		<div class="px-3 py-2">
 			<h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">
@@ -203,4 +203,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</aside>

@@ -18,11 +18,10 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+		<strong>Sveltekit + Shadcn/ui starter project</strong>
 	</h2>
 
 	<Counter />
