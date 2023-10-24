@@ -4,11 +4,14 @@
 
 	import Header from "$src/demo/layout/Header.svelte";
 	import Sidebar from "$src/demo/layout/sidebar.svelte";
+	import PageLoader from '$src/demo/layout/PageLoader.svelte';
 	
 
 </script>
 
 <div class="app">
+	<PageLoader>
+
 
 	<div class="relative flex min-h-screen flex-col" id="page">
 		<Header />
@@ -17,11 +20,14 @@
 				<Sidebar  class="hidden lg:block" />
 			 </div>
 			<div class="container flex-auto space-y-4 p-8 pt-6">
+				
 				<slot />
 			</div>
 		</div>
 		
 	</div>
+</PageLoader>
+
 
 
 	

@@ -20,26 +20,26 @@
 	const  docsConfig:any = {
 	mainNav: [
 		{
-			title: 'auth',
+			title: 'Auth',
 			href: '/demo/auth'
 		},
 		{
-			title: 'dashboard',
+			title: 'Dashboard',
 			href: '/demo/dashboard'
 		},{
-			title: 'cards',
+			title: 'Cards',
 			href: '/demo/cards'
 		},
 		{
-			title: 'podcast',
+			title: 'Podcast',
 			href: '/demo/podcast'
 		},
 		{
-			title: 'music',
+			title: 'Music',
 			href: '/demo/music'
 		},
 		{
-			title: 'tables',
+			title: 'Tables',
 			href: '/demo/tables'
 		}
 	]
@@ -57,12 +57,14 @@
         
 		{#each docsConfig.mainNav as navItem}
 			<a
+			data-sveltekit-preload-code="viewport"
 				href={navItem.href}
 				class={cn(
-					"transition-colors hover:text-foreground/80",
+					"nav-item transition-colors hover:text-foreground/80",
 					$page.url.pathname.startsWith(navItem.href)
-						? "text-foreground"
-						: "text-foreground/60"
+						? "text-foreground active"
+						: "text-foreground/60",
+
 				)}
 				target={navItem.external ? "_blank" : undefined}
 				rel={navItem.external ? "noreferrer" : undefined}
@@ -70,5 +72,30 @@
 				{navItem.title}
 			</a>
 		{/each}
+		<!-- <a href="/demo/tables" data-sveltekit-preload-code="viewport">
+			mm
+		</a> -->
 	</nav>
 </div>
+
+
+<style>
+	.nav-item{
+		@apply w-16 text-center;
+	}
+	.active{
+		position: relative;
+		/* background: red; */
+		/* view-transition-name:indicator; */
+	}
+	.active:after{
+	
+	content: '';
+	
+
+  view-transition-name:indicator;
+
+  @apply  absolute bg-primary h-1 w-full m-auto left-0 right-0 top-6 rounded-lg ;
+
+}
+</style>

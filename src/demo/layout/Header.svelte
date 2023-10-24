@@ -6,7 +6,7 @@
 </script>
 
 <header
-	class="supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 shadow-sm backdrop-blur"
+	class="supports-[backdrop-filter]:bg-background/60 sticky top-0 z-20 w-full border-b bg-background/95 shadow-sm backdrop-blur"
 >
 	<div class="container flex h-14 items-center">
 		<MainNav></MainNav>
@@ -27,3 +27,10 @@
 		</div>
 	</div>
 </header>
+
+
+<style>
+	header{
+		view-transition-name: header;
+	}
+</style>

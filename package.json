@@ -1,5 +1,5 @@
 {
-	"name": "medsir-web",
+	"name": "sveltekit-shadcn-starter",
 	"version": "0.0.1",
 	"scripts": {
 		"start": "vite dev",
@@ -27,13 +27,14 @@
 		"autoprefixer": "^10.4.14",
 		"bits-ui": "^0.6.2",
 		"clsx": "^2.0.0",
+		"cssnano": "^6.0.1",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"formsnap": "^0.2.0",
-		"lucide-svelte": "^0.288.0",
 		"postcss": "^8.4.24",
 		"postcss-load-config": "^4.0.1",
+		"postcss-nested": "^6.0.1",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
 		"radix-icons-svelte": "^1.2.1",

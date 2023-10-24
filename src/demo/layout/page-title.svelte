@@ -1,7 +1,7 @@
 <script>
 
 	import Button from "$src/shadcn/ui/button/button.svelte";
-	import { Download } from "lucide-svelte";
+	import CustomIcon from "$src/shadcn/ui/icons/CustomIcon.svelte";
 
     export let title='Dashboard';
     export let subTitle='Your personal playlists. Updated daily.';
@@ -19,7 +19,7 @@
 
     <div class="flex items-center space-x-2">
         <Button size="sm">
-            <Download class="mr-2 h-4 w-4" />
+            <CustomIcon icon=download classes="mr-2 h-4 w-4" strokeWidth={2}></CustomIcon>
             Download
         </Button>
     </div>

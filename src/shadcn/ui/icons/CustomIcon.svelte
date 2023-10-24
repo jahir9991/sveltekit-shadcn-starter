@@ -8,7 +8,7 @@
 	export let size: number = 1.5; // default 1em match the parent element
 	export let icon: CustomIconType = 'heart';
 	export let classes: string = '';
-	export let strokeWidth: number = 1;
+	export let strokeWidth: number = 1.6;
 </script>
 
 <svg

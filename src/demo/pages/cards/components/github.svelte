@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { ChevronDown, Circle, Plus, Star } from "lucide-svelte";
 	import Button from "$src/shadcn/ui/button/button.svelte";
 	import * as Card from "$src/shadcn/ui/card";
 	import CustomIcon from "$src/shadcn/ui/icons/CustomIcon.svelte";
@@ -24,7 +23,8 @@
 			class="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground"
 		>
 			<Button variant="secondary" class="px-3 shadow-none">
-				<Star class="mr-2 h-4 w-4" />
+				<!-- <Star class="mr-2 h-4 w-4" /> -->
+				<CustomIcon icon=star classes="mr-2"></CustomIcon>
 				Star
 			</Button>
 			<Separator orientation="vertical" class="h-[20px]" />
@@ -34,10 +34,11 @@
 						builders={[builder]}
 						variant="secondary"
 						class="px-2 shadow-none"
+						
 					>
-						<ChevronDown
-							class="h-4 w-4 text-secondary-foreground"
-						/>
+						
+						<CustomIcon icon="chevron-down" strokeWidth={2} classes="h-4 w-4 text-secondary-foreground"></CustomIcon>
+
 					</Button>
 				</DropdownMenu.Trigger>
 				<DropdownMenu.Content class="w-[200px]">
@@ -54,7 +55,11 @@
 					>
 					<DropdownMenu.Separator />
 					<DropdownMenu.Item>
-						<Plus class="mr-2 h-4 w-4" /> Create List
+						
+						<CustomIcon icon=plus classes="mr-2 "></CustomIcon>
+
+						
+						Create List
 					</DropdownMenu.Item>
 				</DropdownMenu.Content>
 			</DropdownMenu.Root>
@@ -63,11 +68,12 @@
 	<Card.Content>
 		<div class="flex space-x-4 text-sm text-muted-foreground">
 			<div class="flex items-center">
-				<Circle class="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
+				<CustomIcon icon="x-circle" classes="mr-1 h-3 w-3 fill-sky-400 text-sky-400"></CustomIcon>
+
 				TypeScript
 			</div>
 			<div class="flex items-center">
-				<Star class="mr-1 h-3 w-3" />
+				<CustomIcon icon="star" classes="mr-1 h-4 w-4"></CustomIcon>
 				20k
 			</div>
 			<div>Updated April 2023</div>

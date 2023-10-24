@@ -1,15 +1,10 @@
 <script lang="ts">
-	import {
-		Activity,
-		CreditCard,
-		DollarSign,
-		Download,
-		Users
-	} from "lucide-svelte";
+	
 	
 	import 	RecentSales from "./recent-sales.svelte";
 	import * as Card from "$src/shadcn/ui/card";
 	import PageTitle from "$src/demo/layout/page-title.svelte";
+	import CustomIcon from "$src/shadcn/ui/icons/CustomIcon.svelte";
 </script>
 
 
@@ -26,7 +21,8 @@
 							<Card.Title class="text-sm font-medium"
 								>Total Revenue</Card.Title
 							>
-							<DollarSign class="h-4 w-4 text-muted-foreground" />
+							<CustomIcon icon="currency-dollar" classes="h-5 w-5 text-muted-foreground"></CustomIcon>
+							
 						</Card.Header>
 						<Card.Content>
 							<div class="text-2xl font-bold">$45,231.89</div>
@@ -42,7 +38,7 @@
 							<Card.Title class="text-sm font-medium"
 								>Subscriptions</Card.Title
 							>
-							<Users class="h-4 w-4 text-muted-foreground" />
+							<CustomIcon icon="users" classes="h-4 w-4 text-muted-foreground"></CustomIcon>
 						</Card.Header>
 						<Card.Content>
 							<div class="text-2xl font-bold">+2350</div>
@@ -58,7 +54,8 @@
 							<Card.Title class="text-sm font-medium"
 								>Sales</Card.Title
 							>
-							<CreditCard class="h-4 w-4 text-muted-foreground" />
+							<CustomIcon icon="credit-card" classes="h-4 w-4 text-muted-foreground"></CustomIcon>
+
 						</Card.Header>
 						<Card.Content>
 							<div class="text-2xl font-bold">+12,234</div>
@@ -74,7 +71,8 @@
 							<Card.Title class="text-sm font-medium"
 								>Active Now</Card.Title
 							>
-							<Activity class="h-4 w-4 text-muted-foreground" />
+							<CustomIcon icon="activity" classes="h-4 w-4 text-muted-foreground"></CustomIcon>
+
 						</Card.Header>
 						<Card.Content>
 							<div class="text-2xl font-bold">+573</div>

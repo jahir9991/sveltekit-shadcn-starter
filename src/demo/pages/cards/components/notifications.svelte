@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { AtSign, Bell, BellOff } from "lucide-svelte";
 	
 	import * as Card from "$src/shadcn/ui/card";
+	import CustomIcon from "$src/shadcn/ui/icons/CustomIcon.svelte";
 
 </script>
 
@@ -16,7 +16,9 @@
 		<div
 			class="flex items-center space-x-4 rounded-md p-2 hover:bg-accent hover:text-accent-foreground"
 		>
-			<Bell class="h-5 w-5" />
+			
+			<CustomIcon icon="bell" classes="h-5 w-5"></CustomIcon>
+
 			<div class="space-y-1">
 				<p class="text-sm font-medium leading-none">Everything</p>
 				<p class="text-sm text-muted-foreground">
@@ -27,7 +29,8 @@
 		<div
 			class="flex items-center space-x-4 rounded-md bg-accent p-2 text-accent-foreground"
 		>
-			<AtSign class="h-5 w-5" />
+			
+			<CustomIcon icon="at-symbol" classes="h-5 w-5"></CustomIcon>
 			<div class="space-y-1">
 				<p class="text-sm font-medium leading-none">Available</p>
 				<p class="text-sm text-muted-foreground">
@@ -38,7 +41,8 @@
 		<div
 			class="flex items-center space-x-4 rounded-md p-2 hover:bg-accent hover:text-accent-foreground"
 		>
-			<BellOff class="h-5 w-5" />
+			<CustomIcon icon="bell-off" classes="h-5 w-5"></CustomIcon>
+
 			<div class="space-y-1">
 				<p class="text-sm font-medium leading-none">Ignoring</p>
 				<p class="text-sm text-muted-foreground">
