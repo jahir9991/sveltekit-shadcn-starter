@@ -55,11 +55,6 @@
 		<Button on:click={()=>{isopen=true;}}>Add new</Button>
 
 		<Dialog.Root open={isopen} onOpenChange={onOpenChange} >
-			<!-- <Dialog.Trigger asChild let:builder>
-				<Button size="sm" builders={[builder]} class="relative">
-					Add Podcast
-				</Button>
-			</Dialog.Trigger> -->
 			<Dialog.Content>
 				<Dialog.Header>
 					<Dialog.Title>Add Podcast</Dialog.Title>

@@ -41,6 +41,10 @@
 		{
 			title: 'Tables',
 			href: '/demo/tables'
+		},
+		{
+			title: 'Counter',
+			href: '/demo/counter'
 		}
 	]
 };

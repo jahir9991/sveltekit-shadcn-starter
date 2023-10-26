@@ -2,9 +2,9 @@
 	import { PlusCircled } from "radix-icons-svelte";
 
 	import type { Album } from "../../data";
-	import { playlists } from "../../data";
 	import { cn } from "$shadcn/utils";
 	import * as  ContextMenu  from "$shadcn/ui/context-menu";
+	import { hero } from "$src/lib/hero-action";
 
 	let className: string | undefined | null = undefined;
 	export let album: Album;
@@ -12,13 +12,21 @@
 	export let width: number;
 	export let height: number;
 	export { className as class };
+
+
+	// export let heroName:string;
+	
+
 </script>
 
-<div class={cn("space-y-3", className)} {...$$restProps}>
-	<ContextMenu.Root>
-		<ContextMenu.Trigger>
-			<div class="overflow-hidden rounded-md">
+<div >
+
+<div  class={cn("space-y-3", className)} {...$$restProps}>
+	<!-- <ContextMenu.Root>
+		<ContextMenu.Trigger> -->
+			<div  class="overflow-hidden rounded-md"  >
 				<img
+				   
 					class={cn(
 						"h-auto w-auto object-cover transition-all hover:scale-105",
 						aspectRatio === "portrait"
@@ -31,7 +39,7 @@
 					{height}
 				/>
 			</div>
-		</ContextMenu.Trigger>
+		<!-- </ContextMenu.Trigger>
 		<ContextMenu.Content class="w-40">
 			<ContextMenu.Item>Add to Library</ContextMenu.Item>
 			<ContextMenu.Sub>
@@ -70,9 +78,11 @@
 			<ContextMenu.Item>Like</ContextMenu.Item>
 			<ContextMenu.Item>Share</ContextMenu.Item>
 		</ContextMenu.Content>
-	</ContextMenu.Root>
+	</ContextMenu.Root> -->
 	<div class="space-y-1 text-sm">
 		<h3 class="font-medium leading-none">{album.name}</h3>
 		<p class="text-xs text-muted-foreground">{album.artist}</p>
 	</div>
+</div>
+
 </div>
