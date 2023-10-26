@@ -50,7 +50,7 @@
 };
 
 </script>
-<div class="mr-4 hidden md:flex">
+<div class="mr-4 md:flex  w-full py-2 overflow-y-scroll scrollbar-hide">
 	<a href="/demo" class="mr-6 flex items-center space-x-2">
 		<!-- <Icons.logo class="h-6 w-6" /> -->
 		<span class="hidden font-bold sm:inline-block">
@@ -61,7 +61,6 @@
         
 		{#each docsConfig.mainNav as navItem}
 			<a
-			data-sveltekit-preload-code="viewport"
 				href={navItem.href}
 				class={cn(
 					"nav-item transition-colors hover:text-foreground/80",
@@ -76,9 +75,7 @@
 				{navItem.title}
 			</a>
 		{/each}
-		<!-- <a href="/demo/tables" data-sveltekit-preload-code="viewport">
-			mm
-		</a> -->
+		
 	</nav>
 </div>
 

@@ -8,6 +8,7 @@
 	import { hero } from "$src/lib/hero-action";
 	import { onMount, tick } from "svelte";
 	import { page,navigating } from "$app/stores";
+	import postcss from "postcss";
 
     let isopen=false;
 
@@ -42,9 +43,11 @@
     })
 
 </script>
+<section>
+    <PageTitle title="Music"></PageTitle>
 
-		<PageTitle title="Music"></PageTitle>
-<div class="relative">
+</section>
+<section class="relative ">
     <div class="overflow-x-auto">
         <div class="flex space-x-4 pb-4">
             {#each listenNowAlbums as album ,index}
@@ -62,8 +65,8 @@
             {/each}
         </div>
     </div>
-</div>
-<div class="mt-6 space-y-1">
+</section>
+<section class="mt-6 space-y-1">
     <h2
         class="text-2xl font-semibold tracking-tight"
     >
@@ -72,9 +75,9 @@
     <p class="text-sm text-muted-foreground">
         Your personal playlists. Updated daily.
     </p>
-</div>
+</section>
 <Separator class="my-4" />
-<div class="relative">
+<section class="relative px-0 md:px-8">
     <div class="overflow-x-auto">
         <div class="flex space-x-4 pb-4">
             {#each madeForYouAlbums as album}
@@ -93,10 +96,17 @@
             {/each}
         </div>
     </div>
-</div>
+</section>
 
 <Dialog.Root  open={isopen} onOpenChange={onOpenChange} >
 	<Dialog.Content  class="p-0 ">
         <img  use:hero={currentData.id+'-model'}  src={currentData.cover} alt="">
 	</Dialog.Content>
 </Dialog.Root>
+
+
+<style lang=postcss>
+
+
+
+</style>

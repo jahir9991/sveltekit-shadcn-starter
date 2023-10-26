@@ -74,3 +74,18 @@ input[type='number'] {
 			300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 	}
 }
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.no-container {
+	@apply !px-0;
+}

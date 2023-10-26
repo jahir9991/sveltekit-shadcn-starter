@@ -3,7 +3,7 @@
 
 </script>
 
-<div>
+<div class="hidden md:block mx-2">
 	<Input
 		type="search"
 		placeholder="Search..."
