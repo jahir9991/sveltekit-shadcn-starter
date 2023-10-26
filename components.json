@@ -3,7 +3,7 @@
   "style": "new-york",
   "tailwind": {
     "config": "tailwind.config.js",
-    "css": "src/app.postcss",
+    "css": "src/global.postcss",
     "baseColor": "zinc"
   },
   "aliases": {

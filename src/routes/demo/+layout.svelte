@@ -1,5 +1,5 @@
 <script>
-	import '../../app.postcss';
+	import '../../global.postcss';
 	import '../../styles.postcss';
 
 	import Header from "$src/demo/layout/Header.svelte";
@@ -19,7 +19,7 @@
 				<Sidebar  class="hidden lg:block" />
 			 </div>
 			 <PageLoader>
-					<main class=" flex-auto ">
+					<main class="w-full flex-auto ">
 						<slot />	
 					</main>
 			</PageLoader>
@@ -34,9 +34,9 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-	}	
+			}	
 
 	main{
-		min-height: calc(100vh - var(--header-hight))
+		min-height: calc(100vh - var(--header-hight));
 	}
 </style>
