@@ -49,6 +49,25 @@ input[type='number'] {
 	-moz-appearance: textfield;
 }
 
+
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.no-container {
+	@apply !px-0;
+}
+
+
+
 /* view transition.......... */
 /* view transition.......... */
 /* view transition.......... */
@@ -75,17 +94,36 @@ input[type='number'] {
 	}
 }
 
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-.scrollbar-hide::-webkit-scrollbar {
-	display: none;
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
 }
 
-/* For IE, Edge and Firefox */
-.scrollbar-hide {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+@keyframes fade-out {
+	to {
+		opacity: 0;
+	}
 }
 
-.no-container {
-	@apply !px-0;
+@keyframes slide-from-right {
+	from {
+		transform: translateY(30px);
+	}
+}
+
+@keyframes slide-to-left {
+	to {
+		transform: translateY(-30px);
+	}
+}
+
+:root::view-transition-old(root) {
+	animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+		300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+:root::view-transition-new(root) {
+	animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+		300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 }
