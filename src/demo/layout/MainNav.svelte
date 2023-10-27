@@ -57,13 +57,13 @@
 			{siteConfig.name}
 		</span>
 	</a>
-	<nav class="flex items-center space-x-6 text-sm font-medium">
+	<nav class="flex items-center mx-2 space-x-6 text-sm font-medium">
         
 		{#each docsConfig.mainNav as navItem}
 			<a
 				href={navItem.href}
 				class={cn(
-					"nav-item transition-colors hover:text-foreground/80",
+					"nav-item ",
 					$page.url.pathname.startsWith(navItem.href)
 						? "text-foreground active"
 						: "text-foreground/60",
@@ -73,6 +73,7 @@
 				rel={navItem.external ? "noreferrer" : undefined}
 			>
 				{navItem.title}
+			
 			</a>
 		{/each}
 		
@@ -80,23 +81,20 @@
 </div>
 
 
-<style>
+<style lang=postcss>
 	.nav-item{
-		@apply w-16 text-center;
+		@apply   text-center py-2 px-1  transition-colors hover:text-primary/80;
 	}
-	.active{
+	.active  {
+		
+		
 		position: relative;
-		/* background: red; */
-		/* view-transition-name:indicator; */
-	}
-	.active:after{
-	
+		
+		&:after{
+			@apply bg-primary w-full  h-1 bottom-0 absolute  m-auto left-0 right-0  rounded-lg ;
 	content: '';
-	
-
   view-transition-name:indicator;
-
-  @apply  absolute bg-primary h-1 w-full m-auto left-0 right-0 top-6 rounded-lg ;
-
 }
+	}
+	
 </style>
